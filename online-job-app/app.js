@@ -36,6 +36,14 @@ app.get('/applicants-query', routingController.applicantsListing)
 
 app.delete('/applicants/:id', routingController.applicantDelete)
 
+app.get('/applicant-profile', routingController.applicantProfile)
+
+app.get('/profile/:id',routingController.oneMore)
+
+
+
+
+
 
 
 // Creating Server and Listening for Connections \\

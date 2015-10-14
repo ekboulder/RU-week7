@@ -1,0 +1,70 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'ngRoute', '--save' ]
+2 info using npm@1.3.11
+3 info using node@v0.10.31
+4 verbose node symlink /usr/local/bin/node
+5 warn package.json @ No description
+6 warn package.json @ No repository field.
+7 warn package.json @ No README data
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'ngRoute', null ]
+10 verbose cache add name=undefined spec="ngRoute" args=["ngRoute",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'ngRoute',
+11 verbose parsed url   path: 'ngRoute',
+11 verbose parsed url   href: 'ngRoute' }
+12 silly lockFile dbd4fa39-ngRoute ngRoute
+13 verbose lock ngRoute /Users/student/.npm/dbd4fa39-ngRoute.lock
+14 silly lockFile dbd4fa39-ngRoute ngRoute
+15 silly lockFile dbd4fa39-ngRoute ngRoute
+16 verbose addNamed [ 'ngRoute', '' ]
+17 verbose addNamed [ null, '*' ]
+18 silly lockFile c7fabb91-ngRoute ngRoute@
+19 verbose lock ngRoute@ /Users/student/.npm/c7fabb91-ngRoute.lock
+20 silly addNameRange { name: 'ngRoute', range: '*', hasData: false }
+21 verbose url raw ngRoute
+22 verbose url resolving [ 'https://registry.npmjs.org/', './ngRoute' ]
+23 verbose url resolved https://registry.npmjs.org/ngRoute
+24 info trying registry request attempt 1 at 19:32:03
+25 http GET https://registry.npmjs.org/ngRoute
+26 http 404 https://registry.npmjs.org/ngRoute
+27 silly registry.get cb [ 404,
+27 silly registry.get   { 'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=0',
+27 silly registry.get     'content-length': '2',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     date: 'Wed, 14 Oct 2015 01:32:04 GMT',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'x-served-by': 'cache-lax1431-LAX',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1444786324.120517,VS0,VE47' } ]
+28 silly addNameRange number 2 { name: 'ngRoute', range: '*', hasData: true }
+29 silly addNameRange versions [ undefined, [] ]
+30 error TypeError: Cannot read property 'latest' of undefined
+30 error     at next (/usr/local/lib/node_modules/npm/lib/cache.js:687:35)
+30 error     at /usr/local/lib/node_modules/npm/lib/cache.js:675:5
+30 error     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:142:7)
+30 error     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:133:7
+30 error     at Object.oncomplete (fs.js:107:15)
+31 error If you need help, you may report this log at:
+31 error     <http://github.com/isaacs/npm/issues>
+31 error or email it to:
+31 error     <npm-@googlegroups.com>
+32 error System Darwin 14.5.0
+33 error command "node" "/usr/local/bin/npm" "install" "ngRoute" "--save"
+34 error cwd /Users/student/projects/week7/online-job-app
+35 error node -v v0.10.31
+36 error npm -v 1.3.11
+37 error type non_object_property_load
+38 verbose exit [ 1, true ]
