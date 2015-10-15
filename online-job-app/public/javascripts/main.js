@@ -36,6 +36,12 @@ angular.module('JobApp')
 			// }, function (error){
 			// 	console.log('error:', error)
 			// })
+
+			$scope.doSomething = function () {
+				console.log('Iam doing something :)')
+				console.log($location)
+			}
+
 	}])
 
 angular.module('JobApp')
