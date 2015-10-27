@@ -1,12 +1,13 @@
-//Cpntroller from the Angular Material site for the autocomplete functionality
+//Controller from the Angular Material site for the autocomplete functionality
 
 
 angular.module('myApp').controller('DemoCtrl', DemoCtrl);
+  
   function DemoCtrl ($timeout, $q, languageFactory) {
     var self = this;
     
     // list of `language` value/display objects
-    self.languages     = languageFactory.languageDisplay;
+    self.languages     = languageFactory.languageList;
     
     self.selectedItem  = null;
     self.searchText    = null;

@@ -1,0 +1,80 @@
+<div flex>
+
+
+<md-toolbar class="md-warn">
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">How about a Quiz?</h2>
+    </div>
+</md-toolbar>
+
+<md-content layout='column' flex='100' layout-padding>
+
+
+    <div ng-controller="SelectAsyncController" layout="column" layout-align="center center" style="padding:40px" ng-cloak>
+          
+          <p>Yes! Quiz my knowledge of:</p>
+          
+          <div layout="column" layout-align="center center" style="height: 100px;">
+                    
+                    <md-select placeholder="lingo?" ng-model="language" md-on-open="loadLanguageList()" style="min-width: 200px;">
+                            <md-option ng-value="language" ng-repeat="language in languageList">{{language.display}}
+                            </md-option>
+                    </md-select>
+                    
+                    <p class="md-caption">You are being quizzed on: {{ language ? language.display : 'Come on! Pick a lingo!' }}</p>
+         </div>
+    
+    </div>
+
+<!-- the devider list codestarts here -->
+                    <div ng-controller="AppCtrl" layout='column' flex='100' ng-cloak>
+                                  
+                                  
+                                  <md-content>
+                                            <md-list>
+                                              <md-list-item class="md-3-line" ng-repeat="item in quizArray">
+                                                   
+
+                                                    <div layout="row" flex='100'>
+                                                          <div flex='30'>
+                                                                <div class="md-list-item-text">
+                                                                  <h3>{{item.word}}</h3>
+                                                                </div>
+                                                          </div>
+                                                                 
+                                                          <div flex='30'>
+                                                              
+                                                                <md-input-container>
+                                                                    <label>Translate</label>
+                                                                    <input ng-model="item.userTranslation">
+                                                                </md-input-container>
+
+                                                          </div>
+
+                                                          <div flex='10'>
+                                                                 <md-button class="md-fab" aria-label='Is it your Birthday?' ng-click='verifyTranslation()'>
+                                                                        <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
+                                                                </md-button>
+                                                          </div>
+                                                         
+                                                          <div flex='30'>
+                                                            [flex]
+                                                          </div>
+                                                    </div>
+
+                                                    
+                                                
+
+
+
+                                                <md-divider ng-if="!$last"></md-divider>
+                                              </md-list-item>
+                                            </md-list>
+                                  </md-content>
+                                  
+                </div>
+<!-- the devider list code ends here -->
+
+</md-content>
+
+</div>

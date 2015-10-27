@@ -5,7 +5,6 @@ var bodyParser = require('body-parser');
 //Controllers
 var router = require('./controllers/routingController') 
 
-
 // Create Express App Object \\
 var app = express();
 

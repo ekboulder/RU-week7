@@ -1,7 +1,7 @@
 angular.module('myApp')
 	.factory('languageFactory', [function(){
 
-var languageList = {
+var languageDB = {
   "Afrikaans": "af",
   "Albanian": "sq",
   "Arabic": "ar",
@@ -99,12 +99,12 @@ var languageList = {
      * Build `languages` list of key/value pairs
      As expected by the autocomplete directive
 */
-var languageDisplay = []
-for (var language in languageList) {
-      languageDisplay.push({
+var languageList = []
+for (var language in languageDB) {
+      languageList.push({
           value   : language.toLowerCase(),
           display : language,
-          abbrev  : languageList[language],
+          abbrev  : languageDB[language],
       })
 }
 
@@ -115,10 +115,9 @@ var translationRequest = {
   result : '',
 }
 
-
 			return {
-				languageList        : languageList,
-        languageDisplay     : languageDisplay,
+				languageDB          : languageDB,
+        languageList        : languageList,
         translationRequest  : translationRequest,
 			}
 }])
